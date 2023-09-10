@@ -70,7 +70,17 @@
       backdrop-filter: saturate(200%) blur(25px);
     }
 
-.nav-pills .nav-link.active { background-color: #9400FF;}
+.nav .nav-link { 
+  
+ color: #9400FF !important;
+
+}
+
+.nav .active{
+
+  background-color: #9400FF !important;
+  color: white !important;
+}
 
 .nav-title{
 
@@ -975,23 +985,33 @@ font-size: 12px;
          
           <div class="clearfix">
             
-              <div id="carouselExampleIndicators1" class="carousel slide carousel-fade col-md-6 float-md-end mb-3 ms-md-3" data-bs-ride="true">
+              <div id="carouselExampleIndicators1" class="carousel slide carousel-fade col-md-6 float-md-end mb-3 ms-md-3" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 </div>
 
                 <div class="carousel-inner">
                   <div class="carou">
-                  <div class="carousel-item active">
-                    <img src="../images/Crop.jpg" class="d-block w-100 pro"  height="500" alt="...">
+                  <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="../images/igoals/home.png" class="d-block w-100 pro"  height="500" alt="...">
                   </div>
-                  <div class="carousel-item">
-                    <img src="../images/glen.jpg" class="d-block w-100 pro" height="500" alt="...">
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../images/igoals/library.jpg" class="d-block w-100 pro" height="500" alt="...">
                   </div>
-                  <div class="carousel-item">
-                    <img src="../images/Crop.jpg" class="d-block w-100 pro" height="500" alt="...">
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../images/igoals/context-1.jpg" class="d-block w-100 pro" height="500" alt="...">
+                 
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../images/igoals/context-2.jpg" class="d-block w-100 pro" height="500" alt="...">
+                 
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../images/igoals/context-3.jpg" class="d-block w-100 pro" height="500" alt="...">
                  
                   </div>
                 </div>
@@ -1042,23 +1062,33 @@ font-size: 12px;
 
             <div class="clearfix mt-5">
   
-              <div id="carouselExampleIndicators2" class="carousel slide carousel-fade col-md-6 float-md-start mb-3 me-md-3" data-bs-ride="true">
+              <div id="carouselExampleIndicators2" class="carousel slide carousel-fade col-md-6 float-md-start mb-3 me-md-3" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 </div>
 
                 <div class="carousel-inner">
                   <div class="carou">
-                  <div class="carousel-item active">
-                    <img src="../images/Crop.jpg" class="d-block w-100 pro"  height="500" alt="...">
+                  <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="../images/lnd/home.png" class="d-block w-100 pro"  height="500" alt="...">
                   </div>
-                  <div class="carousel-item">
-                    <img src="../images/glen.jpg" class="d-block w-100 pro" height="500" alt="...">
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../images/lnd/login.png" class="d-block w-100 pro" height="500" alt="...">
                   </div>
-                  <div class="carousel-item">
-                    <img src="../images/Crop.jpg" class="d-block w-100 pro" height="500" alt="...">
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../images/lnd/context-1.png" class="d-block w-100 pro" height="500" alt="...">
+                 
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../images/lnd/context-2.png" class="d-block w-100 pro" height="500" alt="...">
+                 
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../images/lnd/context-5.png" class="d-block w-100 pro" height="500" alt="...">
                  
                   </div>
                 </div>
@@ -1109,7 +1139,7 @@ font-size: 12px;
 
             <div class="clearfix">
             
-              <div id="carouselExampleIndicators3" class="carousel slide carousel-fade col-md-6 float-md-end mb-3 ms-md-3" data-bs-ride="true">
+              <div id="carouselExampleIndicators3" class="carousel slide carousel-fade col-md-6 float-md-end mb-3 ms-md-3" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -1118,14 +1148,14 @@ font-size: 12px;
 
                 <div class="carousel-inner">
                   <div class="carou">
-                  <div class="carousel-item active">
-                    <img src="../images/Crop.jpg" class="d-block w-100 pro"  height="500" alt="...">
+                  <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="../images/alawihao/about.jpg" class="d-block w-100 pro"  height="500" alt="...">
                   </div>
-                  <div class="carousel-item">
-                    <img src="../images/glen.jpg" class="d-block w-100 pro" height="500" alt="...">
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../images/alawihao/announcement.jpg" class="d-block w-100 pro" height="500" alt="...">
                   </div>
-                  <div class="carousel-item">
-                    <img src="../images/Crop.jpg" class="d-block w-100 pro" height="500" alt="...">
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../images/alawihao/context-1.jpg" class="d-block w-100 pro" height="500" alt="...">
                  
                   </div>
                 </div>
