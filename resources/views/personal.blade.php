@@ -6,15 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Glen Pabico - A Personal Website</title>
 
+    <link rel="stylesheet" href=" {{asset('../css/style.css')}} ">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+    
+</head>
+
 <style>
 
-/* Overview*/
+  /* Overview*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
@@ -90,7 +98,26 @@
 .navbar{
 
 background:#ffffff;
+animation: fade-down 0.5s 0.4s backwards;
 }     
+
+@keyframes fade-down {
+
+  0% {
+
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+
+  100% {
+
+    opacity: 1;
+    transform: translate(0px) scale(1);
+  }
+
+
+}
+
 
 .firstback{
 
@@ -104,6 +131,7 @@ background-attachment: fixed;
 .fbuttons{
 
   font-family: 'Lexend', sans-serif;
+  animation: fade-up 0.5s;
 }
 
 .carou{
@@ -346,7 +374,7 @@ font-weight: 200;
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
@@ -374,6 +402,24 @@ font-weight: 900;
 
 font-family: 'Montserrat', sans-serif;
 font-size: 130%;
+animation: fade-up 0.5s;
+
+}
+
+@keyframes fade-up{
+
+0% {
+
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+}
+
+100% {
+
+  opacity: 1;
+  transform: translate(0px) scale(1);
+}
+
 
 }
 
@@ -406,6 +452,71 @@ font-size: 18px;
 
   font-family: 'Righteous', cursive;
 
+}
+
+.time{
+
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+
+}
+
+.imageW{
+
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s; 
+  animation-delay: 1s;
+  animation: fadeIn 2.0s;
+}
+
+.animate{
+
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn{
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+
+    opacity: 1;
+  }
+}
+
+.updown-animation{
+
+  animation-name: infiniteUpdown;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  transition: all;
+}
+
+@keyframes infiniteUpdown {
+
+  0%{
+
+    transform: translateY(0px);
+  }
+
+  50%{
+
+    transform: translateY(-40px);
+  }
+
+  100%{
+
+    transform: translateY(0px);
+  }
 }
 
 
@@ -521,10 +632,8 @@ font-size: 12px;
 }
 
 }
+
 </style>
-
-</head>
-
 
 <nav id="navbar-example2" class="navbar navbar-expand-lg px-3 pt-2 sticky-top">
 
@@ -553,7 +662,6 @@ font-size: 12px;
             <a class="nav-link nav-title text-uppercase" href="#scrollspyHeading5">Contact</a>
           </li>
         </ul>
-
           </div>
         </div>
       </nav>
@@ -566,7 +674,9 @@ font-size: 12px;
         <div class="container">
             <div class="clearfix mx-3 py-5">
              
-              <img src="/images/Crop.jpg" class="img-fluid col-md-6 float-md-end mb-3 ms-md-3 rounded-gradient-borders" alt="Glen Pabico">
+             <div class="animate fadeIn imageW">
+              <img src="/images/Crop.jpg" class="img-fluid col-md-6 float-md-end mb-3 ms-md-3 rounded-gradient-borders updown-animation" alt="Glen Pabico">
+            </div>
         
                 <p class="welcome responsivetext hii animate-charcter">HI! I AM GLEN</p>
                 
@@ -587,7 +697,7 @@ font-size: 12px;
                   Download my CV <i class="far fa-sticky-note ms-1"></i>
                 </a>
               </div>
-            
+
             </div>
             </div>
 
@@ -616,7 +726,7 @@ font-size: 12px;
 
             <div class="row row-cols-1 row-cols-lg-2 g-2 g-lg-3">
             <div class="col">
-            <div class="card shadow-lg h-100">
+            <div class="card shadow-lg h-100 reveal">
                 
                 <div class="card-body mt-3">
             
@@ -625,12 +735,12 @@ font-size: 12px;
                       <p class="card-title ms-4 text-start skills">HTML <i class="fa-brands fa-html5"></i></p>
                       </div>
                       <div class="col">
-                      <p class="card-title text-end me-2 percent">95%</p>
+                      <p class="card-title text-end me-2 percent counter">95%</p>
                     </div>
                       </div>
 
                   <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-                    <div class="progress-bar prog" style="width: 95%"></div>
+                    <div class="progress-bar prog bro" style="width: 0%"></div>
                   </div>
                 
                 </div>
@@ -641,7 +751,7 @@ font-size: 12px;
             </div>
 
             <div class="col">
-                <div class="card shadow-lg h-100">
+                <div class="card shadow-lg h-100 reveal">
                     
                     <div class="card-body mt-3">
 
@@ -655,7 +765,7 @@ font-size: 12px;
                         </div>
 
                        <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-                           <div class="progress-bar prog" style="width: 91%"></div>
+                           <div class="progress-barr prog" style="width: 0%"></div>
                         </div>
 
                     </div>
@@ -667,7 +777,7 @@ font-size: 12px;
                 </div>
 
                 <div class="col">
-                    <div class="card shadow-lg h-100">
+                    <div class="card shadow-lg h-100 reveal">
                         
                         <div class="card-body mt-3">
 
@@ -681,7 +791,7 @@ font-size: 12px;
                             </div>
 
                           <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-                            <div class="progress-bar prog" style="width: 85%"></div>
+                            <div class="progress-barrr prog" style="width: 0%"></div>
                           </div>
                         </div>
 
@@ -693,7 +803,7 @@ font-size: 12px;
                     </div>
 
                     <div class="col">
-                        <div class="card shadow-lg h-100">
+                        <div class="card shadow-lg h-100 reveal">
                            
                             <div class="card-body mt-3">
 
@@ -708,7 +818,7 @@ font-size: 12px;
                          
 
                                <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-                                  <div class="progress-bar prog" style="width: 85%"></div>
+                                  <div class="progress-barrrr prog" style="width: 0%"></div>
                                 </div>
                             </div>
                             <div class="text-body-secondary mb-3 ms-3">
@@ -718,7 +828,7 @@ font-size: 12px;
                         </div>
 
                         <div class="col">
-                            <div class="card shadow-lg h-100">
+                            <div class="card shadow-lg h-100 reveal">
 
                                 <div class="card-body mt-3">
                                  
@@ -732,7 +842,7 @@ font-size: 12px;
                                     </div>
                               
                                    <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-                                      <div class="progress-bar prog" style="width: 92%"></div>
+                                      <div class="progress-barrrrr prog" style="width: 0%"></div>
                                     </div>
                                 </div>
                                 <div class="text-body-secondary mb-3 ms-3">
@@ -742,7 +852,7 @@ font-size: 12px;
                             </div>
 
                             <div class="col">
-                                <div class="card shadow-lg h-100">
+                                <div class="card shadow-lg h-100 reveal">
 
                                     <div class="card-body mt-3">
 
@@ -755,7 +865,7 @@ font-size: 12px;
                                         </div>
                                       </div>
                                       <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-                                        <div class="progress-bar prog" style="width: 96%"></div>
+                                        <div class="progress-barrrrrr prog" style="width: 0%"></div>
                                       </div>
                                     </div>
                                     <div class="text-body-secondary mb-3 ms-3">
@@ -768,7 +878,7 @@ font-size: 12px;
                                 </div>
 
                                 <div class="col">
-                                    <div class="card shadow-lg h-100">
+                                    <div class="card shadow-lg h-100 reveal">
 
                                         <div class="card-body mt-3">
 
@@ -782,7 +892,7 @@ font-size: 12px;
                                           </div>
 
                                           <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-                                            <div class="progress-bar prog" style="width: 91%"></div>
+                                            <div class="progress-barrrrrrr prog" style="width: 0%"></div>
 
                                           </div>
                                         </div>
@@ -794,7 +904,7 @@ font-size: 12px;
                                     </div>
 
                                     <div class="col">
-                                        <div class="card shadow-lg h-100">
+                                        <div class="card shadow-lg h-100 reveal">
                                            
                                             <div class="card-body mt-3">
 
@@ -808,7 +918,7 @@ font-size: 12px;
                                               </div>
 
                                               <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-                                                <div class="progress-bar prog" style="width: 92%"></div>
+                                                <div class="progress-barrrrrrrr prog" style="width: 0%"></div>
 
                                               </div>
                                             </div>
@@ -859,7 +969,7 @@ font-size: 12px;
             </div>
 
             <div class="timeline left">
-              <div class="card">
+              <div class="card time">
                 <div class="card-body p-4">
                   <p class="year fs-1">2019</p>
                   <div class="card-title text-uppercase fw-bold" style="color: #27005D;">Computer System Servicing (INTERNSHIP)</div>
@@ -1223,6 +1333,15 @@ font-size: 12px;
         <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
           If you're interested in discussing potential business collaborations or have any inquiries, please don't hesitate to reach out through my social media accounts or here, and I'll be happy to connect and explore how we can work together.
         </p>
+
+        
+        <div class="d-flex justify-content-start gap-2 my-3">
+            
+          <i class="fa-brands fa-github fa-2x mx-2" style="color: hsl(218, 81%, 85%)"></i>
+          <i class="fa-brands fa-linkedin fa-2x mx-2" style="color: hsl(218, 81%, 85%)"></i>
+          <i class="fa-brands fa-facebook fa-2x mx-2" style="color: hsl(218, 81%, 85%)"></i>
+        
+        </div>
       </div>
 
       <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
@@ -1316,10 +1435,38 @@ font-size: 12px;
 
      <script>
 
+    $(".progress-bar").animate({
+                width: "95%",
+        }, 5000);
 
+        $(".progress-barr").animate({
+                width: "91%",
+        }, 5000);
 
+        $(".progress-barrr").animate({
+                width: "85%",
+        }, 5000);
+
+        $(".progress-barrrr").animate({
+                width: "85%",
+        }, 5000);
+
+        $(".progress-barrrrr").animate({
+                width: "92%",
+        }, 5000);
+
+        $(".progress-barrrrrr").animate({
+                width: "96%",
+        }, 5000);
+
+        $(".progress-barrrrrrr").animate({
+                width: "91%",
+        }, 5000);
+
+        $(".progress-barrrrrrrr").animate({
+                width: "92%",
+        }, 5000);
       </script>
-
 
 </body>
 </html>
