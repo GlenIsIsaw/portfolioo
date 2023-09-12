@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Glen Pabico - A Personal Website</title>
+    <link rel="icon" type="image/x-icon" href="../images/GlenIcon.png">
 
     <link rel="stylesheet" href=" {{asset('../css/style.css')}} ">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -38,6 +39,9 @@
 /* Buttons on Hero*/
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Outfit:wght@500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+
 .background-radial-gradient {
       background-color: hsl(218, 41%, 15%);
       background-image: radial-gradient(650px circle at 0% 0%,
@@ -54,7 +58,7 @@
           transparent 100%);
     }
 
-    #radius-shape-1 {
+#radius-shape-1 {
       height: 220px;
       width: 220px;
       top: -60px;
@@ -63,7 +67,7 @@
       overflow: hidden;
     }
 
-    #radius-shape-2 {
+#radius-shape-2 {
       border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
       bottom: -60px;
       right: -110px;
@@ -81,6 +85,7 @@
 .nav .nav-link { 
   
  color: #9400FF !important;
+ animation: fade-down 0.5s 0.4s backwards;
 
 }
 
@@ -98,7 +103,6 @@
 .navbar{
 
 background:#ffffff;
-animation: fade-down 0.5s 0.4s backwards;
 }     
 
 @keyframes fade-down {
@@ -183,7 +187,7 @@ font-size: 170%;
   content: "";
   position: absolute;
   width: 6px;
-  background-color: #939597;
+  background-color: #27005D;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -204,7 +208,7 @@ font-size: 170%;
   width: 25px;
   height: 25px;
   right: -13px;
-  background-color: #000080;
+  background-color: #AED2FF;
   border: 5px solid #9400FF;
   top: 15px;
   border-radius: 50%;
@@ -288,6 +292,16 @@ font-size: 170%;
   .right {
     left: 0%;
   }
+}
+
+.glasstime{
+
+  background: rgba( 255, 255, 255, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 9px );
+  -webkit-backdrop-filter: blur( 9px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .reveal{
@@ -402,7 +416,7 @@ font-weight: 900;
 
 font-family: 'Montserrat', sans-serif;
 font-size: 130%;
-animation: fade-up 0.5s;
+animation: fade-up 0.8s;
 
 }
 
@@ -462,6 +476,11 @@ font-size: 18px;
   backdrop-filter: blur(11px);
   -webkit-backdrop-filter: blur(11px);
 
+}
+
+.w{
+
+visibility: hidden;
 }
 
 .imageW{
@@ -633,13 +652,48 @@ font-size: 12px;
 
 }
 
+@media (max-width: 1199.98px) {
+.w{
+
+  visibility: visible;
+
+  font-family: 'Bungee Inline', cursive;
+  font-size: 38px;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #27005D 0%,
+    #9400FF 29%,
+    #AED2FF 67%,
+    #8CABFF 100%
+  );
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+}
+
+
 </style>
 
 <nav id="navbar-example2" class="navbar navbar-expand-lg px-3 pt-2 sticky-top">
 
         <div class="container-fluid">
 
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="text-decoration-none" href="#Home"><section class="w">Glen</section></a>
+
+        <button class="navbar-toggler focus-ring focus-ring-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-sharp fa-solid fa-bars fa-lg my-3" style="color: #9400FF;"></i>
           </button>
 
@@ -647,19 +701,19 @@ font-size: 12px;
  
         <ul class="nav nav-pills my-3 justify-content-center">
           <li class="nav-item">
-            <a class="nav-link nav-title text-uppercase" href="#scrollspyHeading1">Home</a>
+            <a class="nav-link nav-title text-uppercase" href="#Home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-title text-uppercase" href="#scrollspyHeading2">About</a>
+            <a class="nav-link nav-title text-uppercase" href="#About">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-title text-uppercase" href="#scrollspyHeading3">Services</a>
+            <a class="nav-link nav-title text-uppercase" href="#Services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-title text-uppercase" href="#scrollspyHeading4">Projects</a>
+            <a class="nav-link nav-title text-uppercase" href="#Projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-title text-uppercase" href="#scrollspyHeading5">Contact</a>
+            <a class="nav-link nav-title text-uppercase" href="#Contact">Contact</a>
           </li>
         </ul>
           </div>
@@ -670,7 +724,7 @@ font-size: 12px;
 
       <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-light rounded-2" tabindex="0">
         
-        <div id="scrollspyHeading1">
+        <div id="Home">
         <div class="container">
             <div class="clearfix mx-3 py-5">
              
@@ -689,7 +743,7 @@ font-size: 12px;
               </div>
             
               <div class="just hi d-grid gap-2 d-md-flex justify-content-md-start"> 
-                <a role="button" href="#scrollspyHeading5" class="btn btn-primary btn-lg rounded-3 border-0 cont button2 fs-5 px-4 py-2 fbuttons" style="background-color:#000080;">
+                <a role="button" href="#Contact" class="btn btn-primary btn-lg rounded-3 border-0 cont button2 fs-5 px-4 py-2 fbuttons" style="background-color:#000080;">
                    Let us Talk <i class="far fa-handshake ms-1"></i>
                 </a>
             
@@ -703,9 +757,9 @@ font-size: 12px;
 
           </div>
 
-<div id="scrollspyHeading2">
+    <div id="About">
         
-        <div class="firstback shadow-lg py-3">
+        <section class="firstback shadow-lg py-3">
 
             <p class="over text-white">
               My <span style="color: #AED2FF;">overview</span>
@@ -718,7 +772,7 @@ font-size: 12px;
               As an aspiring system designer, I eagerly worked on projects, refining my abilities to architect and optimize complex software systems, focusing on scalability, performance, and security. Simultaneously, as a UI/UX designer, I honed my craft by immersing myself in user-centered design methodologies, conducting thorough research, and creating visually appealing and intuitive interfaces. 
               my dedication to mastering these roles has positioned I well for future success in creating innovative and seamless digital solutions. </p>
             
-            </div>
+            </section>
 
       <p class="mt-4 titles text-uppercase">Skills</p>
 
@@ -735,11 +789,11 @@ font-size: 12px;
                       <p class="card-title ms-4 text-start skills">HTML <i class="fa-brands fa-html5"></i></p>
                       </div>
                       <div class="col">
-                      <p class="card-title text-end me-2 percent counter">95%</p>
+                      <p class="card-title text-end me-2 percent counter">90%</p>
                     </div>
                       </div>
 
-                  <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                  <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
                     <div class="progress-bar prog bro" style="width: 0%"></div>
                   </div>
                 
@@ -786,11 +840,11 @@ font-size: 12px;
                           <p class="card-title ms-4 text-start skills">JavaScript <i class="fa-brands fa-square-js"></i></p>
                               </div>
                               <div class="col">
-                                <p class="card-title text-end me-2 percent">85%</p>
+                                <p class="card-title text-end me-2 percent">83%</p>
                               </div>
                             </div>
 
-                          <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                          <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
                             <div class="progress-barrr prog" style="width: 0%"></div>
                           </div>
                         </div>
@@ -812,12 +866,12 @@ font-size: 12px;
                               <p class="card-title ms-4 text-start skills">PHP <i class="fa-brands fa-php"></i></p>
                                   </div>
                                   <div class="col">
-                                    <p class="card-title text-end me-2 percent">85%</p>
+                                    <p class="card-title text-end me-2 percent">84%</p>
                                   </div>
                                 </div>
                          
 
-                               <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                               <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
                                   <div class="progress-barrrr prog" style="width: 0%"></div>
                                 </div>
                             </div>
@@ -837,11 +891,11 @@ font-size: 12px;
                                         <p class="card-title ms-4 text-start skills">UI/UX Designing <i class="fa-solid fa-palette"></i></p>
                                       </div>
                                       <div class="col">
-                                        <p class="card-title text-end me-2 percent">92%</p>
+                                        <p class="card-title text-end me-2 percent">90%</p>
                                       </div>
                                     </div>
                               
-                                   <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                   <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
                                       <div class="progress-barrrrr prog" style="width: 0%"></div>
                                     </div>
                                 </div>
@@ -861,10 +915,10 @@ font-size: 12px;
                                       <h6 class="card-title ms-4 text-start skill">Technical Support & Writing <i class="fa-solid fa-pen"></i> <i class="fa-solid fa-screwdriver-wrench"></i></h6>
                                         </div>
                                         <div class="col">
-                                          <p class="card-title text-end me-2 percent">96%</p>
+                                          <p class="card-title text-end me-2 percent">95%</p>
                                         </div>
                                       </div>
-                                      <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                      <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
                                         <div class="progress-barrrrrr prog" style="width: 0%"></div>
                                       </div>
                                     </div>
@@ -887,11 +941,11 @@ font-size: 12px;
                                           <p class="card-title ms-4 text-start skills">Graphics Designing <i class="fa-solid fa-layer-group"></i></p>
                                             </div>
                                             <div class="col">
-                                              <p class="card-title text-end me-2 percent">91%</p>
+                                              <p class="card-title text-end me-2 percent">90%</p>
                                             </div>
                                           </div>
 
-                                          <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                          <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
                                             <div class="progress-barrrrrrr prog" style="width: 0%"></div>
 
                                           </div>
@@ -913,11 +967,11 @@ font-size: 12px;
                                               <p class="card-title ms-4 text-start skills">Video & Photo editing <i class="fa-solid fa-image"></i></p>
                                                 </div>
                                                 <div class="col">
-                                                  <p class="card-title text-end me-2 percent">92%</p>
+                                                  <p class="card-title text-end me-2 percent">90%</p>
                                                 </div>
                                               </div>
 
-                                              <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                              <div class="progress ms-4 me-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
                                                 <div class="progress-barrrrrrrr prog" style="width: 0%"></div>
 
                                               </div>
@@ -931,19 +985,19 @@ font-size: 12px;
             </div>
         </div>
 
-      <p class="mt-5 titles text-uppercase">Work Experience</p>
+      <p class="mt-5 titles text-uppercase">Experiences</p>
 
-      <section style="background-color: #F0F2F5;">
+      <section style="background-image:linear-gradient(#FFFFFF, #ECE9E6, #FFFFFF);" class="py-5">
         <div class="container py-5">
 
           <div class="main-timeline">
 
             <div class="timeline left">
-              <div class="card">
+              <div class="card glasstime">
                 <div class="card-body p-4">
                   <p class="year fs-1">2023</p>
                   <div class="card-title text-uppercase fw-bold" style="color: #27005D;">FRONT – END DEVELOPER & UI/UX DEVELOPER (INTERNSHIP)</div>
-                  <p><i class="fa-solid fa-building me-2"></i>Department of the Interior and Local Government<br><span><i class="fa-solid fa-location-dot me-2"></i>Camarines Norte, Bicol Region, Philippines</span></p>
+                  <p><i class="fa-solid fa-building me-2"></i>Department of the Interior and Local Government Cam - Norte <br><span><i class="fa-solid fa-location-dot me-2"></i>Camarines Norte, Bicol Region, Philippines</span></p>
                   <hr class="mx-5">
                   <p class="mb-0 overtext">I work as UI/UX and Web Front-End Developer at DILG - Provincial Office Camarines Norte.
                     I craft a visually appealing and user-friendly web-interfaces while also
@@ -955,7 +1009,7 @@ font-size: 12px;
             </div>
 
             <div class="timeline right">
-              <div class="card">
+              <div class="card glasstime">
                 <div class="card-body p-4">
                   <p class="year fs-1">2019</p>
                   <div class="card-title text-uppercase fw-bold" style="color: #27005D;">IT & TECHNICAL SUPPORT</div>
@@ -969,7 +1023,7 @@ font-size: 12px;
             </div>
 
             <div class="timeline left">
-              <div class="card time">
+              <div class="card glasstime">
                 <div class="card-body p-4">
                   <p class="year fs-1">2019</p>
                   <div class="card-title text-uppercase fw-bold" style="color: #27005D;">Computer System Servicing (INTERNSHIP)</div>
@@ -991,16 +1045,17 @@ font-size: 12px;
     </div>
 
     
-  <div id="scrollspyHeading3">
+  <div id="Services">
 
           <p class="mt-5 titles text-uppercase">SERVICES</p>
 
+          <section style="background-image:linear-gradient(#FFFFFF, #ECE9E6, #FFFFFF);" class="py-5">
           <div class="container mt-5">
 
           <div class="row row-cols-1 row-cols-lg-5 g-2 g-lg-3 justify-content-center mt-3">
             <div class="col">
         
-            <div class="card h-100 border-0 reveal">
+            <div class="card h-100 border-0 reveal glasstime">
             <div class="card-body bg-transparent">
               <div class="mb-3 offer"><i class="fas fa-paint-brush fa-3x" style="color: #000080;"></i></div>
               <h5 class="card-title fw-bold text-uppercase offer"><span style="color: #9400FF;">UI/UX</span> Designing</h5>
@@ -1012,7 +1067,7 @@ font-size: 12px;
         
             <div class="col">
         
-              <div class="card h-100 border-0 reveal">
+              <div class="card h-100 border-0 reveal glasstime">
               <div class="card-body bg-transparent">
                 <div class="mb-3 offer"><i class="fas fa-globe fa-3x" style="color: #000080;"></i></div>
                 <h5 class="card-title fw-bold text-uppercase offer"><span style="color: #9400FF;">Website</span> Designing</h5>
@@ -1024,7 +1079,7 @@ font-size: 12px;
         
               <div class="col">
         
-                <div class="card h-100 border-0 reveal">
+                <div class="card h-100 border-0 reveal glasstime">
                 <div class="card-body bg-transparent">
                   <div class="mb-3 offer"><i class="fas fa-laptop-code fa-3x" style="color: #000080;"></i></div>
                   <h5 class="card-title fw-bold text-uppercase offer"><span style="color: #9400FF;">Frontend</span> Developing</h5>
@@ -1040,7 +1095,7 @@ font-size: 12px;
           <div class="row row-cols-1 row-cols-lg-5 g-2 g-lg-3 justify-content-center mt-3">
             <div class="col">
         
-            <div class="card h-100 reveal border-0">
+            <div class="card h-100 reveal border-0 glasstime">
             <div class="card-body bg-transparent">
               <div class="offer mb-3"><i class="fas fa-paint-brush fa-3x" style="color: #000080;"></i></div>
               <h5 class="card-title fw-bold text-uppercase offer"><span style="color: #9400FF;">Digital</span> Designing</h5>
@@ -1055,7 +1110,7 @@ font-size: 12px;
         
             <div class="col">
         
-              <div class="card h-100 reveal border-0">
+              <div class="card h-100 reveal border-0 glasstime">
               <div class="card-body">
                 <div class="offer mb-3"><i class="fas fa-keyboard fa-3x" style="color: #000080;"></i></div>
                 <h5 class="card-title fw-bold text-uppercase offer"><span style="color: #9400FF;">Technical</span> Writing</h5>
@@ -1069,7 +1124,7 @@ font-size: 12px;
         
                 <div class="col">
         
-                  <div class="card h-100 reveal border-0">
+                  <div class="card h-100 reveal border-0 glasstime">
                   <div class="card-body">
                     <div class="offer mb-3"><i class="fas fa-mobile fa-3x" style="color: #000080;"></i></div>
                     <h5 class="card-title fw-bold text-uppercase offer"><span style="color: #9400FF;">Social Media</span> Strategist</h5>
@@ -1084,11 +1139,14 @@ font-size: 12px;
           </div>
 
         </div>
+      </section>
 
       </div>
 
-  <div id="scrollspyHeading4">
+  <div id="Projects">
         <p class="titles text-uppercase mt-5">Projects</p>
+
+        <section style="background-image:linear-gradient(#FFFFFF, #ECE9E6, #FFFFFF);" class="py-5">
 
         <div class="container mt-5">
 
@@ -1312,14 +1370,13 @@ font-size: 12px;
               </div>
               
             </div>
-            
+
+          </section>
+                        
             </div>
 
-          </div>
-    
-
   
-  <div id="scrollspyHeading5">
+  <div id="Contact">
       <!-- Section: Design Block -->
 <section class="background-radial-gradient overflow-hidden mt-5">
 
@@ -1327,7 +1384,7 @@ font-size: 12px;
     <div class="row gx-lg-5 align-items-center mb-5">
       <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
         <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-          Have a bussiness in mind? <br />
+          Say Hello & <br />
           <span style="color: hsl(218, 81%, 75%)">Send your message here</span>
         </h1>
         <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
@@ -1337,9 +1394,12 @@ font-size: 12px;
         
         <div class="d-flex justify-content-start gap-2 my-3">
             
-          <i class="fa-brands fa-github fa-2x mx-2" style="color: hsl(218, 81%, 85%)"></i>
-          <i class="fa-brands fa-linkedin fa-2x mx-2" style="color: hsl(218, 81%, 85%)"></i>
-          <i class="fa-brands fa-facebook fa-2x mx-2" style="color: hsl(218, 81%, 85%)"></i>
+          <a role="button" href="https://github.com/GlenIsIsaw" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github fa-2x mx-2" style="color: hsl(218, 81%, 85%)"></i> </a>
+          <a role="button" href="https://www.linkedin.com/in/glen-pabico/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin fa-2x mx-2" style="color: hsl(218, 81%, 85%)"></i></a>
+          <a role="button" href="https://www.facebook.com/glen.pabico/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-facebook fa-2x mx-2" style="color: hsl(218, 81%, 85%)"></i></a>
         
         </div>
       </div>
@@ -1383,19 +1443,19 @@ font-size: 12px;
               <!-- Register buttons -->
               <div class="text-center">
                 <p>or simply reach me through:</p>
-                <a role="button" href="https://www.facebook.com/glen.pabico/" class="btn btn-link btn-floating mx-1" >
+                <a role="button" href="https://www.facebook.com/glen.pabico/" target="_blank" rel="noopener noreferrer" class="btn btn-link btn-floating mx-1" >
                   <i class="fab fa-facebook-f"></i>
                 </a>
 
-                <a role="button" href="https://mail.google.com/" class="btn btn-link btn-floating mx-1">
+                <a role="button" href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" class="btn btn-link btn-floating mx-1">
                   <i class="fab fa-google"></i>
                 </a>
 
-                <a role="button" href="https://www.facebook.com/glen.pabico/" class="btn btn-link btn-floating mx-1">
+                <a role="button" href="https://www.facebook.com/glen.pabico/" target="_blank" rel="noopener noreferrer" class="btn btn-link btn-floating mx-1">
                   <i class="fa-brands fa-facebook-messenger"></i>
                 </a>
 
-                <a role="button" href="https://www.linkedin.com/in/glen-pabico-8a5b17279/" class="btn btn-link btn-floating mx-1">
+                <a role="button" href="https://www.linkedin.com/in/glen-pabico-8a5b17279/" target="_blank" rel="noopener noreferrer" class="btn btn-link btn-floating mx-1">
                   <i class="fa-brands fa-linkedin"></i>
                 </a>
               </div>
@@ -1409,7 +1469,6 @@ font-size: 12px;
 <!-- Section: Design Block -->
                 </div>
               </div>
-            </div>
     
   
       <script>
@@ -1436,7 +1495,7 @@ font-size: 12px;
      <script>
 
     $(".progress-bar").animate({
-                width: "95%",
+                width: "90%",
         }, 5000);
 
         $(".progress-barr").animate({
@@ -1444,27 +1503,27 @@ font-size: 12px;
         }, 5000);
 
         $(".progress-barrr").animate({
-                width: "85%",
+                width: "83%",
         }, 5000);
 
         $(".progress-barrrr").animate({
-                width: "85%",
+                width: "84%",
         }, 5000);
 
         $(".progress-barrrrr").animate({
-                width: "92%",
+                width: "90%",
         }, 5000);
 
         $(".progress-barrrrrr").animate({
-                width: "96%",
+                width: "95%",
         }, 5000);
 
         $(".progress-barrrrrrr").animate({
-                width: "91%",
+                width: "90%",
         }, 5000);
 
         $(".progress-barrrrrrrr").animate({
-                width: "92%",
+                width: "90%",
         }, 5000);
       </script>
 
