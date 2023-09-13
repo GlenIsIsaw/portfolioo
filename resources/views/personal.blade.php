@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Glen Pabico - A Personal Website</title>
     <link rel="icon" type="image/x-icon" href="../images/GlenIcon.png">
-
-    <link rel="stylesheet" href=" {{asset('../css/style.css')}} ">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
@@ -140,7 +139,7 @@ background-attachment: fixed;
 
 .carou{
 
-background-image: url('../images/coo.png');
+background-image: url('../images/coo.webp');
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
@@ -298,8 +297,6 @@ font-size: 170%;
 
   background: rgba( 255, 255, 255, 0.2 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 9px );
-  -webkit-backdrop-filter: blur( 9px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
@@ -478,7 +475,7 @@ font-size: 18px;
 
 }
 
-.w{
+.logo{
 
 visibility: hidden;
 }
@@ -653,10 +650,9 @@ font-size: 12px;
 }
 
 @media (max-width: 1199.98px) {
-.w{
+.logo{
 
   visibility: visible;
-
   font-family: 'Bungee Inline', cursive;
   font-size: 38px;
   text-transform: uppercase;
@@ -690,8 +686,8 @@ font-size: 12px;
 <nav id="navbar-example2" class="navbar navbar-expand-lg px-3 pt-2 sticky-top">
 
         <div class="container-fluid">
-
-          <a class="text-decoration-none" href="#Home"><section class="w">Glen</section></a>
+         
+          <a class="text-decoration-none" href="#Home"><section class="logo">Glen</section></a>
 
         <button class="navbar-toggler focus-ring focus-ring-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-sharp fa-solid fa-bars fa-lg my-3" style="color: #9400FF;"></i>
@@ -725,11 +721,11 @@ font-size: 12px;
       <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-light rounded-2" tabindex="0">
         
         <div id="Home">
-        <div class="container">
+        <div class="container pt-3">
             <div class="clearfix mx-3 py-5">
              
              <div class="animate fadeIn imageW">
-              <img src="/images/Crop.jpg" class="img-fluid col-md-6 float-md-end mb-3 ms-md-3 rounded-gradient-borders updown-animation" alt="Glen Pabico">
+              <img src="../images/Crop.webp" class="img-fluid col-md-6 float-md-end mb-3 ms-md-3 rounded-gradient-borders updown-animation" alt="Glen Pabico">
             </div>
         
                 <p class="welcome responsivetext hii animate-charcter">HI! I AM GLEN</p>
@@ -776,7 +772,7 @@ font-size: 12px;
 
       <p class="mt-4 titles text-uppercase">Skills</p>
 
-        <div class="container">
+        <div class="container pt-5">
 
             <div class="row row-cols-1 row-cols-lg-2 g-2 g-lg-3">
             <div class="col">
@@ -988,7 +984,7 @@ font-size: 12px;
       <p class="mt-5 titles text-uppercase">Experiences</p>
 
       <section style="background-image:linear-gradient(#FFFFFF, #ECE9E6, #FFFFFF);" class="py-5">
-        <div class="container py-5">
+        <div class="container pt-5">
 
           <div class="main-timeline">
 
@@ -1050,7 +1046,7 @@ font-size: 12px;
           <p class="mt-5 titles text-uppercase">SERVICES</p>
 
           <section style="background-image:linear-gradient(#FFFFFF, #ECE9E6, #FFFFFF);" class="py-5">
-          <div class="container mt-5">
+          <div class="container pt-5">
 
           <div class="row row-cols-1 row-cols-lg-5 g-2 g-lg-3 justify-content-center mt-3">
             <div class="col">
@@ -1148,9 +1144,8 @@ font-size: 12px;
 
         <section style="background-image:linear-gradient(#FFFFFF, #ECE9E6, #FFFFFF);" class="py-5">
 
-        <div class="container mt-5">
+        <div class="container pt-5">
 
-         
           <div class="clearfix">
             
               <div id="carouselExampleIndicators1" class="carousel slide carousel-fade col-md-6 float-md-end mb-3 ms-md-3" data-bs-ride="carousel">
@@ -1410,32 +1405,33 @@ font-size: 12px;
 
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
-            <form>
+
+            <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
               <!-- 2 column grid layout with text inputs for the first and last names -->
               <div class="form-floating mb-3">
-                <input type="name" class="form-control" id="floatingInput" placeholder="Juan Dela Cruz">
-                <label for="floatingInput">Your Name</label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Juan Dela Cruz">
+                <label for="name">Your Name</label>
               </div>
               <div class="form-floating">
-                <input type="address" class="form-control" id="floatingPassword" placeholder="Address">
-                <label for="floatingPassword">Address</label>
+                <input type="address" class="form-control" id="address" name="address" placeholder="Address">
+                <label for="address">Address</label>
               </div>
 
               <!-- Email input -->
               <div class="form-floating mb-3 mt-3">
-                <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                <label for="email">Email address</label>
               </div>
 
               <!-- Password input -->
               <div class="form-floating mb-3 mt-3">
-                <textarea class="form-control" placeholder="Leave a message here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <textarea class="form-control" type="text" placeholder="Leave a message here" name="floatingTextarea2" id="floatingTextarea2" style="height: 100px"></textarea>
                 <label for="floatingTextarea2">Message</label>
               </div>
 
               <!-- Submit button -->
               <div class="text-center">
-              <button type="button" class="btn btn-primary btn-lg rounded-3 border-0 cont button2 fs-6 px-4 py-2 fbuttons mb-3" style="background-color:#000080;">
+              <button type="submit" class="btn btn-primary btn-lg rounded-3 border-0 cont button2 fs-6 px-4 py-2 fbuttons mb-3" style="background-color:#000080;">
                 SEND
              </button>
               </div>
